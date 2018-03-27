@@ -1,0 +1,138 @@
+         /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 400px;
+    width: 100%;
+
+}
+      /* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*api currency*/
+#currency{
+
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body{
+	background-color: pink;
+}
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Asap Condensed', verdana, sans-serif;
+    font-size: 20px;
+    font-color: white;
+    height: 100%;
+}
+
+.bank{
+
+    background-color: black;
+    grid-area: bank;
+    padding: 10px; 
+    margin: 5px; 
+    
+}
+
+
+.hoogtelandingsplek{
+    background-color: black;
+    grid-area: hoogte;
+    padding: 10px;
+    margin: 5px;
+}
+.weercondities{
+    background-color: black;
+    grid-area: weer;
+    padding: 10px;
+    margin: 5px;
+  
+}
+
+.landingsplaats{
+    background-color: black;      /*#484848*/
+    grid-area: plek;
+    padding: 10px;
+    margin: 5px;
+
+
+}
+.grid-container{
+  display: grid;
+
+  grid-template-areas: 
+        "plek"
+        "bank"
+        "weer"
+        "hoogte"; 
+}
+
+.landingsplaats{
+  grid-area: plek;
+} 
+
+.bank{
+  grid-area: bank;
+}
+
+.weercondities{
+  grid-area: weer;
+}
+.hoogtelandingsplek{
+    grid-area: hoogte;
+}
+
+@media only screen and (min-width: 300px) { 
+    .grid-container  {
+        display:grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        grid-template-areas:
+       	"plek"
+        "bank"
+        "weer"
+        "hoogte"
+    }            
+
+@media only screen and (min-width: 600px) {     
+    .grid-container  {
+        display:grid;
+
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+
+        grid-template-areas:
+        "plek bank"
+        "weer hoogte";
+    } 
+
+
+@media only screen and (min-width: 850px) { 
+    .grid-container  {
+        display:grid;
+
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        grid-template-areas:
+        "plek bank"
+        "weer hoogte";
+    } 
+}

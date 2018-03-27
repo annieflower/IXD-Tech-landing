@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Dashboard Anna Fleur</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<!-- css -->
+		<link type="text/css" href="landing.css" rel="stylesheet" />
+		  <style>
+       		 /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 400px;
+        width: 100%;
+
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+   		 </style>	
+	</head>
+
+  
+  </head>
+    
+	<body>
+		<div class="grid-container">
+
+		<!-- LANDING -->
+			<div class="landingsplaats"> 
+				<h2>Landingsplaats</h2>
+		   	 	<div id="map"></div>
+		    	
+		    	<script async defer
+		   		 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIa0xZeesulW96sp6RfZ3s6NMh8AL-beY&callback=initMap">
+		    	</script>
+
+			</div>
+	<!-- WEER -->
+		    <div class="weercondities">
+		    	<h2>Weercondities</h2>
+		    </div>
+
+		    	
+			<!-- bankgegevens-->
+			 <div class="bank"> 
+				 <h2>Bank currency's</h2>		
+         <div id="banktotem"> </div>
+         <script async defer
+           src="http://apilayer.net/api/live?access_key=462a3e1441a5f40ea425cc80c1527c6b">
+          </script>
+			</div>
+
+		<!-- HOOGTE-->
+			<div class="hoogtelandingsplek">
+				<h2>Hoogte landingsplek</h2>
+			</div>
+	</div>	
+
+	</body>
+	<footer>
+	</footer>
+		<!-- Javascripts -->
+
+        <script src="http://www.apilayer.net/api/live?access_key=462a3e1441a5f40ea425cc80c1527c6b&callback=init&callback=initMap" async defer id="currency"></script>
+
+		<script type="text/javascript" src="landing.js"></script>
+</html>

@@ -1,0 +1,20 @@
+http://apilayer.net/api/live
+
+    ? access_key = YOUR_ACCESS_KEY
+    & source = GBP
+    & currencies = USD,AUD,CAD,PLN,MXN
+    & format = 1
+{
+  "success":true,
+  "terms":"https:\/\/currencylayer.com\/terms",
+  "privacy":"https:\/\/currencylayer.com\/privacy",
+  "timestamp":1522066761,
+  "source":"USD",
+  "quotes":{
+    "USDUSD":1,
+    "USDAUD":1.293202,
+    "USDCAD":1.28894,
+    "USDPLN":3.406798,
+    "USDMXN":18.427902
+  }
+}
