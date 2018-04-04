@@ -1,6 +1,6 @@
 http://apilayer.net/api/live
 
-    ? access_key = YOUR_ACCESS_KEY
+    ? access_key = 462a3e1441a5f40ea425cc80c1527c6b
     & source = GBP
     & currencies = USD,AUD,CAD,PLN,MXN
     & format = 1
