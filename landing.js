@@ -63,14 +63,17 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: schiphol,
     map: map,
-    icon: ufoIcon
+    icon: image
   });
-  var ufoIcon = {
-    url: "ufo.png",
-    scaledSize: new google.maps.Size(40, 40),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(-10, 40)
-  };
+  var image = 'ufo.png';
+
+
+  // ufoIcon = {
+  //   url: "ufo.png",
+  //   scaledSize: new google.maps.Size(40, 40),
+  //   origin: new google.maps.Point(0, 0),
+  //   anchor: new google.maps.Point(-10, 40)
+  // };
   styles: [
     {elementType: 'geometry', stylers: [{color: 'red'}]},
     {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
