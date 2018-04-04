@@ -2,50 +2,37 @@
 
 function getAPIdata() {
 
-
-  // get latest weather
-  // var test = fetch('http://apilayer.net/api/live?access_key=462a3e1441a5f40ea425cc80c1527c6b').response.json();
-  
-  // // parse to JSON format
-  // .then(function(response) {
-  //   return response.json();
-  // })
-  
-  // // render weather per day
-  // .then(function(response) {
-
-  //   // show full JSON object
-  //   console.log(response);
-
-  //   document.getElementById('banktotem').innerHTML = response.quotes;
-
-  //   var quotes;
-  //   for (quotes = 0; quotes < 0; quotes++) {
-  //   // Runs 5 times, with values of step 0 through 4.
-    
-  //   }
   var jsonData;
+
+  // API request
   fetch('http://apilayer.net/api/live?access_key=462a3e1441a5f40ea425cc80c1527c6b')
     .then(res => res.json())
     .then(data=> jsonData = data)
-    .then(() => console.log(jsonData))
-  var quotes = JSON.stringify(jsonData);
-
-  document.getElementById('banktotem').innerHTML = quotes;
-    return jsonData;
-
-    
-
-  // })
-  
-  // // catch error
-  // .catch(function (error) {
-  //   console.error('Request failed', error);
-  // });
+    .then(() => renderQuote(jsonData));    
 }
 
 // init data stream
 getAPIdata();
+
+
+function renderQuote(data) {
+
+  //console.log(data.quotes.USDAED);
+  //var data = JSON.stringify(data);
+
+  document.getElementById('banktotem').innerHTML = "USDAED " + data.quotes.USDAED + "<br>" ;
+  document.getElementById('banktotem').innerHTML += "USDAUD " + data.quotes.USDAUD + "<br>";
+  document.getElementById('banktotem').innerHTML += "USDAFN " + data.quotes.USDAFN + "<br>";
+  document.getElementById('banktotem').innerHTML += "USDALL " + data.quotes.USDALL + "<br>";
+  document.getElementById('banktotem').innerHTML += "USDCAD " + data.quotes.USDCAD + "<br>";
+  document.getElementById('banktotem').innerHTML += "USDCVE " + data.quotes.USDCVE + "<br>";
+  document.getElementById('banktotem').innerHTML += "USDCZK " + data.quotes.USDCZK + "<br>";
+  document.getElementById('banktotem').innerHTML += "USDEUR " + data.quotes.USDEUR + "<br>";
+
+
+  
+}
+
 
 // function setMarker( lat, lng){
 
@@ -75,10 +62,17 @@ function initMap() {
   });
   var marker = new google.maps.Marker({
     position: schiphol,
-    map: map
+    map: map,
+    icon: ufoIcon
   });
+  var ufoIcon = {
+    url: "ufo.png",
+    scaledSize: new google.maps.Size(40, 40),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(-10, 40)
+  };
   styles: [
-    {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+    {elementType: 'geometry', stylers: [{color: 'red'}]},
     {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
     {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
     {
